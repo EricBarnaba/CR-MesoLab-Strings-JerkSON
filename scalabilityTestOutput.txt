@@ -36,4 +36,9 @@ Price:  1020.45	Seen:   1 times
 Price:   974.75	Seen:   1 times
 ===============	===============
 
+Name: Ice cream	Seen:   1 times
+$$$$$$$$$$$$$$$	$$$$$$$$$$$$$$$
+Price:     3.00	Seen:   1 times
+===============	===============
+
 Errors         	Seen:   5 times

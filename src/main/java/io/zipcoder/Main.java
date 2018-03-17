@@ -16,18 +16,20 @@ public class Main {
         ArrayList<ArrayList<String>> keyValuePairs = new ArrayList<>();
         for(String s : text){
             keyValuePairs.add(jerkSon.findKeyValuePairsInRawItemData(s));
+
         }
-        for(ArrayList<String> items : keyValuePairs){
-            for(String s : items){
+        //System.out.println(keyValuePairs);
+        for(ArrayList<String> item : keyValuePairs){
+
                 try {
-                    Item temp = jerkSon.parseStringIntoItem(s);
-                    System.out.println(temp.toString());
+                    Item temp = jerkSon.parseStringIntoItem(item.toString());
+                    builder.append(temp.toString() + "\n");
                 }
                 catch(ItemParseException ipe){
 
                 }
             }
-        }
+
         return builder.toString();
     }
 

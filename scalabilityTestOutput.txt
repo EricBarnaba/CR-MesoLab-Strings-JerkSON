@@ -1,0 +1,39 @@
+Name:      Milk	Seen:   6 times
+$$$$$$$$$$$$$$$	$$$$$$$$$$$$$$$
+Price:     3.23	Seen:   5 times
+===============	===============
+Price:     1.23	Seen:   1 times
+===============	===============
+
+Name:     Bread	Seen:   6 times
+$$$$$$$$$$$$$$$	$$$$$$$$$$$$$$$
+Price:     1.23	Seen:   6 times
+===============	===============
+
+Name:   Cookies	Seen:   8 times
+$$$$$$$$$$$$$$$	$$$$$$$$$$$$$$$
+Price:     2.25	Seen:   8 times
+===============	===============
+
+Name:    Apples	Seen:   4 times
+$$$$$$$$$$$$$$$	$$$$$$$$$$$$$$$
+Price:     0.25	Seen:   2 times
+===============	===============
+Price:     0.23	Seen:   2 times
+===============	===============
+
+Name: Twizzlers	Seen:   2 times
+$$$$$$$$$$$$$$$	$$$$$$$$$$$$$$$
+Price:     9.03	Seen:   1 times
+===============	===============
+Price:    10.54	Seen:   1 times
+===============	===============
+
+Name:   Saffron	Seen:   2 times
+$$$$$$$$$$$$$$$	$$$$$$$$$$$$$$$
+Price:  1020.45	Seen:   1 times
+===============	===============
+Price:   974.75	Seen:   1 times
+===============	===============
+
+Errors         	Seen:   5 times

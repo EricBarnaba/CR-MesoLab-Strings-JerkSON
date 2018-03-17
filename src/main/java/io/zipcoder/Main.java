@@ -20,9 +20,9 @@ public class Main {
     }
 
 
-    public String readRawDataToString() throws Exception{
+    public String readRawDataToString(String fileName) throws Exception{
         ClassLoader classLoader = getClass().getClassLoader();
-        String result = IOUtils.toString(classLoader.getResourceAsStream("RawData.txt"));
+        String result = IOUtils.toString(classLoader.getResourceAsStream(fileName));
 
         //StringBuilder builder = new StringBuilder();
         ArrayList<String> text = jerkSon.parseRawDataIntoStringArray(result);
@@ -70,11 +70,11 @@ public class Main {
     }
 
     public static void main(String[] args) throws Exception{
-        String output = (new Main()).readRawDataToString();
+        String output = (new Main()).readRawDataToString("RawData.txt");
         System.out.println(output);
-        BufferedWriter writer = new BufferedWriter(new FileWriter("/Users/ericbarnaba/Dev/Labs/HurtLocker/myOutput.txt"));
-        writer.write(output);
-        writer.close();
+//        BufferedWriter writer = new BufferedWriter(new FileWriter("/Users/ericbarnaba/Dev/Labs/HurtLocker/myOutput.txt"));
+//        writer.write(output);
+//        writer.close();
         // TODO: parse the data in output into items, and display to console.
     }
 }

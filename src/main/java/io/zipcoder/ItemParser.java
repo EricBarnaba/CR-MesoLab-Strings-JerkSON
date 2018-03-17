@@ -10,9 +10,9 @@ public class ItemParser {
 
     private int exceptions;
 
-    private Pattern wordPattern = Pattern.compile("(:[a-zA-Z|\\d]+)[^./@;!%*^,]");
+    private Pattern wordPattern = Pattern.compile("(:[a-zA-Z|\\d|\\s]+)[^./@;!%*^,]");
     private Pattern pricePattern = Pattern.compile("(\\d+\\.\\d{2})");
-    private Pattern expirationPattern = Pattern.compile("(\\d+/\\d{2}/\\d{4})");
+    private Pattern expirationPattern = Pattern.compile("(\\d{1,2}/\\d{2}/\\d{4})");
 
     private HashMap<String,ArrayList<Double>> namesAndPrices;
 

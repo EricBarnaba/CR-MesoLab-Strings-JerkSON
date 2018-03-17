@@ -30,23 +30,22 @@ public class ItemParser {
         String name;
         String type;
         Matcher words = wordPattern.matcher(rawItem);
-        if(!words.find()) throw new ItemParseException();
-        name = words.group().substring(1);
-        name = name.toLowerCase();
-        name = name.substring(0,1).toUpperCase() + name.substring(1);
+        if(!words.find()) incrementExceptionsAndThrowIPE();
+        name = words.group().substring(1,2).toUpperCase() + words.group().substring(2).toLowerCase();
         if(name.contains("0"))name =  name.replace('0','o');
-        if(!words.find()) throw new ItemParseException();
+
+        if(!words.find()) incrementExceptionsAndThrowIPE();
         type = words.group().substring(1);
 
 
         Double price ;
         Matcher dollars = pricePattern.matcher(rawItem);
-        if(!dollars.find()) throw new ItemParseException();
+        if(!dollars.find()) incrementExceptionsAndThrowIPE();
         price = Double.valueOf(dollars.group());
 
         String expiration;
         Matcher date = expirationPattern.matcher(rawItem);
-        if(!date.find()) throw new ItemParseException();
+        if(!date.find()) incrementExceptionsAndThrowIPE();
         expiration = date.group();
 
         return new Item(name,price,type,expiration);
@@ -60,6 +59,11 @@ public class ItemParser {
 
     private ArrayList<String> splitStringWithRegexPattern(String stringPattern, String inputString){
         return new ArrayList<String>(Arrays.asList(inputString.split(stringPattern)));
+    }
+
+    private void incrementExceptionsAndThrowIPE() throws ItemParseException{
+        exceptions++;
+        throw new ItemParseException();
     }
 
 
